@@ -1,0 +1,16 @@
+/* Even number sum
+   uses loops and logic */
+num limit = 10;
+num count = 0;
+num total = 0;
+repeat (count <= limit) {
+    check (count % 2 == 0 && count != 4) {
+        total += count;
+    }
+    otherwise {
+        total -= 1;
+    }
+    count++;
+}
+show(total);
+
