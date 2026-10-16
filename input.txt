@@ -1,0 +1,38 @@
+/* Sample program
+   Student result calculator */
+fixed num PASS_MARK = 40;
+
+task dec average(num total, num count) {
+    give total / count;
+}
+
+task none main() {
+    num marks[3];
+    num i = 0;
+    dec avg = 0.0;
+    text name = "Student\tA";
+    letter grade = 'B';
+    flag passed = no;
+
+    // read three marks
+    repeat (i < 3) {
+        ask(marks[i]);
+        check (marks[i] < 0 || marks[i] > 100) {
+            skip;
+        }
+        i++;
+    }
+
+    avg = average(marks[0] + marks[1] + marks[2], 3);
+    check (avg >= PASS_MARK && !passed) {
+        passed = yes;
+        grade = 'A';
+    }
+    otherwise {
+        avg -= 1.5;
+        stop;
+    }
+    show(name);
+    show(avg % 10);
+}
+
