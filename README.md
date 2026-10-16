@@ -9,7 +9,10 @@ Compiler Design Lab submission package for a token-reporting lexical analyzer.
 | `lexer.l` | Flex scanner rules |
 | `parser.y` | Bison token driver, symbol table, and reports |
 | `input.txt` | Valid sample program |
+| `input2.txt` | Valid temperature-converter sample |
+| `input3.txt` | Valid loop and logical-operator sample |
 | `errors.txt` | Eleven deliberate lexical errors |
+| `errors2.txt` | Additional mixed lexical-error sample |
 | `Makefile` | Repeatable build and test commands |
 | `run_tests.sh` | Automated test script |
 | `VERIFICATION.txt` | Recorded build and test result for this package |
@@ -53,13 +56,26 @@ Valid program:
 ./lexer input.txt
 ```
 
+Additional valid programs:
+
+```bash
+./lexer input2.txt
+./lexer input3.txt
+```
+
 Error test:
 
 ```bash
 ./lexer errors.txt
 ```
 
-The error test deliberately returns exit status `1` because it finds lexical
+Additional error test:
+
+```bash
+./lexer errors2.txt
+```
+
+The error tests deliberately return exit status `1` because they find lexical
 errors. That status is expected, not a build failure.
 
 ## Automated verification
