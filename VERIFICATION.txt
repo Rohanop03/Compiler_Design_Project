@@ -1,0 +1,25 @@
+VERIFICATION RECORD
+===================
+
+Date: 2026-10-16
+Environment: Ubuntu 24.04 under WSL
+
+Tools:
+  flex 2.6.4
+  bison (GNU Bison) 3.8.2
+  gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+
+Command:
+  sh run_tests.sh
+
+Result:
+  PASS: valid and error test cases completed.
+  input.txt: 162 tokens, 2 comments, 0 lexical errors
+  errors.txt: 41 valid tokens, 1 closed comment, 11 lexical errors
+
+Notes:
+  - The compiler completed with no project-source warnings.
+  - errors.txt intentionally makes the analyzer return exit status 1.
+  - The eleven errors consist of ten malformed-token lines followed by one
+    unterminated multiline comment.
+
