@@ -1,0 +1,14 @@
+// Error test: mixed mistakes
+num 7days = 7;
+dec pi = 3.14.15;
+num huge = 2147483648;
+letter grade = 'AB';
+letter code = '\q';
+text msg = "Hello \x world";
+num cost = 50 # 2;
+dec price = 9.;
+num value$ = 5;
+text note = "unterminated;
+/* closing never comes
+num end = 1;
+
