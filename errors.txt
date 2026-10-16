@@ -1,0 +1,14 @@
+// Program with one lexical error per line
+num 9lives = 3;
+dec rate = 12.5.3;
+dec total = 45.;
+num big = 99999999999;
+letter c = '';
+letter d = 'xy';
+text t = "bad \q escape";
+num price = 100 @ 2;
+num this_name_is_far_too_long_for_our_rules = 1;
+text open = "never closed;
+/* this comment is never closed
+num lost = 1;
+
