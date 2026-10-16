@@ -1,0 +1,15 @@
+// Temperature converter
+fixed dec FACTOR = 1.8;
+fixed num OFFSET = 32;
+
+task dec toFahrenheit(dec celsius) {
+    give celsius * FACTOR + OFFSET;
+}
+
+task none main() {
+    dec temp = 36.6;
+    text label = "Body temp";
+    show(label);
+    show(toFahrenheit(temp));
+}
+
